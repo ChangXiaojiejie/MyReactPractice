@@ -27,15 +27,6 @@ class Todo extends Component {
     store.subscribe(this.changeStore);
   }
   componentDidMount() {
-    // axios
-    //   .get("api/todolist")
-    //   .then((res) => {
-    //     const action = getListDataAction(res.data);
-    //     store.dispatch(action);
-    //   })
-    //   .catch((e) => {
-    //     console.log("错误信息", e);
-    //   });
     const action = getList();
     store.dispatch(action)
   }
