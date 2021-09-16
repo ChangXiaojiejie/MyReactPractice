@@ -32,10 +32,12 @@ const TodoList = (props) => {
   );
 };
 
+// 将store中的state派发到当前页面的props上
 const mapStateToProps = (state) => ({
   inputValue: state.inputValue,
   list: state.list,
 });
+// 自定义函数，将其派发到当前页面组件的props上
 const mapDispatchToProps = (dispatch) => ({
   changeValue(e) {
     const action = changeValueAction(e);
@@ -51,4 +53,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
+// connect 用于连接，将mapStateToProps和mapDispatchToProps两个方法，连接到TodoList上
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
