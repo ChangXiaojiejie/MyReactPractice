@@ -30,15 +30,3 @@ export const getListDataAction = (data: any) => {
         data
     }
 }
-
-// export const getListData = () => {
-//     return (dispatch: any) => {
-//         axios.get("api/todolist").then((res: any) => {
-//             const action = getListDataAction(res.data);
-//             dispatch(action);
-//         }).catch( (e: any) => {
-//             console.log("错误信息", e)
-//         })
-       
-//     }
-// }
