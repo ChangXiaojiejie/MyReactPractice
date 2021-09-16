@@ -33,6 +33,7 @@ export const getListData = () => {
             const action = getListDataAction(res.data);
             dispatch(action);
         }).catch( (e: any) => {
+            console.log("错误信息", e)
         })
        
     }
