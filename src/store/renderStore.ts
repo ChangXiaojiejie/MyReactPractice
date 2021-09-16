@@ -1,5 +1,4 @@
-import { ADD_VALUE, CHANG_VALUE, DEL_VALUE, GET_LIST_DATA } from "./actiontypes";
-import axios from "axios";
+import { ADD_VALUE, CHANG_VALUE, DEL_VALUE, GET_LIST_DATA, GET_LIST } from "./actiontypes";
 export const getChangeAction = (e: any) => {
     return {
         type: CHANG_VALUE,
@@ -19,22 +18,27 @@ export const getDelAction = (index: number) => {
         index
     };
 }
+export const getList = () => {
+    return {
+        type: GET_LIST
+    }
+}
 
-export const getListDataAction = (data: any[]) => {
+export const getListDataAction = (data: any) => {
     return {
         type: GET_LIST_DATA,
         data
     }
 }
 
-export const getListData = () => {
-    return (dispatch: any) => {
-        axios.get("api/todolist").then((res: any) => {
-            const action = getListDataAction(res.data);
-            dispatch(action);
-        }).catch( (e: any) => {
-            console.log("错误信息", e)
-        })
+// export const getListData = () => {
+//     return (dispatch: any) => {
+//         axios.get("api/todolist").then((res: any) => {
+//             const action = getListDataAction(res.data);
+//             dispatch(action);
+//         }).catch( (e: any) => {
+//             console.log("错误信息", e)
+//         })
        
-    }
-}
+//     }
+// }

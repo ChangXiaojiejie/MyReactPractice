@@ -7,7 +7,7 @@ import {
   getChangeAction,
   getAddAction,
   getDelAction,
-  getListData
+  getList,
 } from "./store/renderStore";
 
 import TodoItem from "./todo.item";
@@ -27,13 +27,18 @@ class Todo extends Component {
     store.subscribe(this.changeStore);
   }
   componentDidMount() {
-    console.log("执行了")
-    const action = getListData();
+    // axios
+    //   .get("api/todolist")
+    //   .then((res) => {
+    //     const action = getListDataAction(res.data);
+    //     store.dispatch(action);
+    //   })
+    //   .catch((e) => {
+    //     console.log("错误信息", e);
+    //   });
+    const action = getList();
     store.dispatch(action)
   }
-  // ComponentDidMount() {
-  //   console.log("执行了")
-  // }
 
   render() {
     // const { list, inputValue } = this.state;
