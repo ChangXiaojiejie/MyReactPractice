@@ -7,7 +7,7 @@ import {
   getChangeAction,
   getAddAction,
   getDelAction,
-  getList,
+  getListDataAction,
 } from "./store/renderStore";
 
 import TodoItem from "./todo.item";
@@ -27,7 +27,7 @@ class Todo extends Component {
     store.subscribe(this.changeStore);
   }
   componentDidMount() {
-    const action = getList();
+    const action = getListDataAction();
     store.dispatch(action)
   }
 

@@ -6,7 +6,7 @@ const defaultState = {
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ((state = defaultState, action: any) => {
+export default ((state = defaultState, action) => {
     if (action.type === CHANG_VALUE) {
         const newState = JSON.parse(JSON.stringify(state));
         newState.inputValue = action.value;
