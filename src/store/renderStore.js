@@ -25,6 +25,7 @@ export const getList = () => {
     }
 }
 
+// 保存list数据的action
 export const getListData = (data) => {
     return {
         type: GET_LIST_DATA,
@@ -32,6 +33,7 @@ export const getListData = (data) => {
     }
 }
 
+// 异步通过接口获取list数据的action
 export const getListDataAction = () => {
     // 默认store只能识别对象的action，但是使用了thunk，可以通过传入一个函数，在thunk中间件中会执行
     return (dispatch) => {
