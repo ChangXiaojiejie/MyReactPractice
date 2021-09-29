@@ -53,5 +53,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-// connect 用于连接，将mapStateToProps和mapDispatchToProps两个方法，连接到TodoList上
+// connect 用于连接，将mapStateToProps和mapDispatchToProps两个方法，连接到TodoList上。
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
